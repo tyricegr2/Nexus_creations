@@ -1,2 +1,13 @@
-Testing to see what the hell
+Deep Learning Introduction
+
+  Person speaking -> Microphone -> 44,000 samples per second -> Machine Learning Model
+
+  Key components
+    1. Data that the model will learn from
+    2. A model of how to transform the data
+    3. An objective function that quantifies how well or badly the model is doing
+        - We want to get as close to 100 as possible for an optimized model
+    4. An algorithm to adjust the model's parameters to optimize the objective function
+
+
 
