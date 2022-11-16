@@ -7,7 +7,91 @@ Deep Learning Introduction
     2. A model of how to transform the data
     3. An objective function that quantifies how well or badly the model is doing
         - We want to get as close to 100 as possible for an optimized model
+          - Improving tasks over time 
     4. An algorithm to adjust the model's parameters to optimize the objective function
 
+  Supervised Learning
+    - Contains both features and labels tasked to produce a model to predict labels given input features
+    - Predicting labels given input features
 
+    Examples:
+      Predicting cancer vs not cancer given a computer tomography image
+      Predicting correct  translation to French, given a sentence in english
+      Predicting the price of a stock for the next month based on month's financial reporting data
+    Regression:
+      - "How many? or How much?" suggests regression
+      - How many hours will this surgery take?
+      - How much rainfall will this town have in the next six hours?
+      
+      Linear regression: Contracter charges you $350 for 3 hours, but charges your friend $250 for 2 hours
+        - Assumption: $50 to show up, $100 per hour of work
 
+    Classification:
+      - "Which one?" problem
+      - Use the language of probabilities
+      - "The Classifier is 90% sure that the image depicts a pokemon
+
+    Tagging:
+      - Problem set: Donkey, dog, cat, and rooster stacked on top of each other
+      - Multi-label classification problems: "technology," "Programming languages" etc
+
+    Search:
+      - Goal: Which among a set of results should be shown most prominently to a certain users
+    
+    Recommender Systems:
+      - Related to search and ranking
+      - Difference: Emphasis on personalization to specific users
+      - Movie, music, news recommendations
+    
+    Sequence Learning
+      - Speech to text transcription
+        - Automatic Speech Recognition
+        - Sound is typically sampled at 8 kHz or 16 kHz
+      - Text to Speech
+        - Inverse of automatic speech recognition
+        - Input is text, output is audio file
+      - Machine Translation
+        - Difficulty with Alignment of german vs english translation
+      - Tagging and Parsing 
+        - Annotating text sequences with attributes
+  
+  Unsupervised and Self-supervised learning 
+    - Can we find a small number of prototypes that accurately summarize the data?
+      - Grouping a set of photos into landscape photots
+      - Given a collection of users browsing activities, can we group them into users with similar behavior?
+    
+    - Can we find a small number of parameters that accurately capturethe relevant properties of the data?
+
+    - Is there a description of the root causes of much of the data that we observe?
+      - Can we see how pricing, pollution, crime, location, etc. are related based upon empircal data?
+      - Fields dealing with causality and probabilistic graphics models deal with this question
+    
+    - Deep generative models
+      - Estimate the density of the data p(x), either explicityly or implicitly
+
+    Self Super-vised learning - leverages some aspect of unlabeled data to provide supervision
+
+  Interacting with the Environment
+    - We need to think about choosing actions, not just amking predictions
+
+    Does the environment remember what we did previously?
+    Does the future data always resemble the past or do the patterns chnage obver time?
+    
+    Distribution shift - training and test data are different
+
+  Reinforcement Learning
+    Interacts with the environment and takes actions
+
+    Application: Robotics, dialogue systems, developing AI for video games
+    
+    1. Action -> Reward 
+    2. Action -> Environment -> Reward -> Agent -> Action
+    3. Envirnoment -> Observation -> Agent -> Action
+
+    When the environment is fully observed, the reinforcement problem is called a Markov decision process
+    When the state does not depend on the previous actions -> Contextual bandit problem
+      When there is no state, just a set of available actions with initially unknown rewards, this problem is the multi-armed bandit problem
+
+  Key principles found in most networks:
+    - Alternation of linear and nonlinear processing units, often reffered to as layers
+    - Use of the chain rule (A.K.A. backpropagation) for adjusting parameters in the entire network at once
