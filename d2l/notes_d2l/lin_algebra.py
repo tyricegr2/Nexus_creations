@@ -81,3 +81,17 @@ print(C.cumsum(axis=0))
 y = torch.ones(3, dtype = torch.float32)
 
 print(x.shape)
+
+Z = torch.ones(3,4)
+print(C)
+print(Z)
+print(torch.mm(C, Z))
+
+u = torch.tensor([3.0, -4.0])
+
+print(torch.norm(u)) # Similar to Pythagorean thereom
+print(torch.ones(4,9))
+
+# 1^2 + 1^2 + .. = 36 (9 * 4) -> sqrt(36) = 6
+
+print(torch.norm(torch.ones(4,9)))
