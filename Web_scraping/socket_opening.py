@@ -4,7 +4,7 @@ import socket
 HOST = 'www.google.com'
 PORT = 443 # For HTTPS, if I want HTTP, then I use Port = 90
 
-client_socket = socket.socket(socket.AF_INTET, socket.SOCK_STREAM)
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_address_google = (HOST, PORT)
 client_socket.connect(server_address_google)
 
@@ -14,3 +14,10 @@ client_socket.sendall(request_header_google)
 response = ''
 while True:
     recv = client_socket.recv(1024)
+    if not recv:
+        break
+    response += str(recv)
+
+print(response)
+client_socket.close()
+
