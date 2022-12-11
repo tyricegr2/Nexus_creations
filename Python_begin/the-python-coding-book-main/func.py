@@ -21,7 +21,7 @@ some_numbers = [4, 6, 34, 1, 5]
 output_some = some_numbers.append(100)
 print(output_some) # returns None
 print(some_numbers)
-
+"""
 # Introducing the Contact List Program
 
 agents = [
